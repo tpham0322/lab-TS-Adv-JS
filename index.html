@@ -1,13 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>vite-project</title>
-  </head>
-  <body>
-    <div id="app"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>E-Commerce System</title>
+
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body class="min-h-screen bg-gray-100 text-gray-900">
+
+    <header class="bg-blue-600 text-white shadow-lg">
+        <div class="mx-auto max-w-7xl px-6 py-8">
+            <h1 class="text-3xl font-bold">
+                E-Commerce System
+            </h1>
+
+            <p class="mt-2 text-blue-100">
+                Product catalog, discounts, and tax calculations
+            </p>
+        </div>
+    </header>
+
+    <main class="mx-auto max-w-7xl px-6 py-8">
+
+        <div class="mb-8 flex flex-col gap-4 sm:flex-row">
+
+            <input
+                id="searchInput"
+                type="text"
+                placeholder="Search products..."
+                class="flex-1 rounded-lg border border-gray-300 bg-white px-4 py-3 outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200"
+            >
+        </div>
+
+        <div
+            id="status"
+            class="mb-6 hidden rounded-lg p-4"
+        ></div>
+
+        <section
+            id="productContainer"
+            class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        ></section>
+
+    </main>
+
     <script type="module" src="/src/main.ts"></script>
-  </body>
+
+</body>
 </html>
